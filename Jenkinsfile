@@ -44,7 +44,7 @@ pipeline {
         }
         stage('Publish artifacts to S3 Bucket') {
             steps {
-                sh "aws configure set region us-west-1"
+                sh "aws configure set region us-east-1"
                 sh "aws s3 cp ./target/Maven-java-spring-boot-0.0.1-SNAPSHOT.jar s3://$AWS_S3_BUCKET/$ARTIFACT_NAME"
             }
          }
