@@ -3,11 +3,11 @@ pipeline {
     environment {
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
-        AWS_S3_BUCKET = "teamcity-5"
+        AWS_S3_BUCKET = "teamcity-proj"
         ARTIFACT_NAME = "spring-boot.jar"
-        AWS_EB_APP_NAME = "teamcity"
+        AWS_EB_APP_NAME = "teamcity-proj"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Teamcity-env"
+        AWS_EB_ENVIRONMENT = "Teamcityproj-env"
     }
     stages {
         stage('Validate') {
